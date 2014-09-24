@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="firstApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Test App</title>
 
-    <meta http-equiv="refresh" content="5">
+<!--
+    <meta http-equiv="refresh" content="6">
+        -->
 
-    <link href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body ng-controller="listCtrl">
 
+<div class="well well-sm">
+    <header class="list-group-item-heading" ><h4 align="center">Objects in Subject</h4></header>
+    <ng-view></ng-view>
+</div>
 
-
-    <script src="js/angular.js"></script>
-    <script src="js/angular-route.js"></script>
+<script src="js/angular.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <script src="js/apps.js"></script>
 
 </body>
