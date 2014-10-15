@@ -1,0 +1,16 @@
+<table width="100%" class="playlist" cellpadding="0" cellspacing="0">
+	<!--
+    <tr >
+        <td><a ng-click="playlive('http://ipip.in:8000/vaar')" href="#">SriBhainiSahib Live - 24kbps</a></td>
+        <td width="30" align="center"><span ng-click="defpop()"><i class="i-icon"></i></span></td>
+    </tr>
+    <tr >
+        <td><a ng-click="playlive('http://ipip.in:8000/amrit')" href="#">SriBhainiSahib Live - 128kbps</a></td>
+        <td width="30" align="center"><span ng-click="defpop()"><i class="i-icon"></i></span></td>
+    </tr>
+	-->
+    <tr ng-repeat="item in playlist">
+        <td><a ng-click="playThis($index)" href="{{item.addr}}">{{item.name}}</a></td>
+        <td width="30" align="center"><span ng-click="pop($index)"><i class="i-icon"></i></span></td>
+    </tr>
+</table>

@@ -1,0 +1,316 @@
+
+#main_container {
+    position: fixed;
+/*    overflow: auto; */
+    height: 100%;
+}
+
+/*****************************************
+                player
+*****************************************/
+
+div.jp-audio {
+    width: 100%;
+    position: relative;
+}
+div.jp-audio-stream {
+    width: 101px;
+    padding: 20px 20px 10px 20px;
+}
+div.jp-interface {
+    position: relative;
+    width: 100%;
+    background-color: #232323; /* Required for the full screen */
+}
+div.jp-audio-stream .jp-interface {
+    height: 50px;
+    padding-top: 30px;
+}
+div.jp-controls-holder {
+    clear: both;
+    width: 440px;
+    margin: 0 auto 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+div.jp-interface ul.jp-controls {
+    list-style-type: none;
+    overflow: hidden;
+    width: 46px;
+    height: 45px;
+    z-index: 9;
+}
+div.jp-audio ul.jp-controls, div.jp-audio-stream ul.jp-controls {
+    margin: 0;
+    padding: 0;
+}
+div.jp-audio-stream ul.jp-controls {
+    width: 100px;
+}
+div.jp-interface ul.jp-controls li {
+    display: block;
+}
+div.jp-interface ul.jp-controls a {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    height: 34px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url(../img/icons.png);
+}
+div.jp-type-single .jp-controls li a {
+    width: 46px;
+    height: 45px;
+}
+div.jp-type-single .jp-play {
+    background: green;
+    background-position: right 0;
+}
+div.jp-type-single .jp-pause {
+    background: orange;
+}
+div.jp-audio-stream .jp-play, div.jp-audio-stream .jp-pause {
+    border-right: 1px solid #180920;
+}
+div.jp-type-single .jp-stop {
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.jp-progress {
+    width: 197px;
+    height: 13px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45px;
+}
+.jp-seek-bar {
+    width: 100%!important;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 45px;
+}
+.jp-play-bar {
+    background: #a7340a;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+.jp-duration,.jp-current-time {
+    font-size: 12px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 21px;
+    right: 10px;
+}
+.jp-current-time {
+    top: 5px;
+}
+.jp-current-time {
+    float: left;
+}
+.jp-details ul, .jp-playlist ul {
+    list-style-type: none;
+    font-size: .7em;
+    margin: 0;
+    padding: 0;
+}
+.jp-details li, .jp-playlist li {
+    position: relative;
+    padding: 2px 0;
+    border-top: 1px solid #554461;
+    border-bottom: 1px solid #180a1f;
+    overflow: hidden;
+}
+.jp-details li {
+    border-bottom: none;
+    border-top: none;
+    padding: 0;
+    text-align: center;
+}
+div.jp-type-playlist div.jp-playlist li:first-child {
+    border-top: none;
+    padding-top: 3px;
+}
+div.jp-type-playlist div.jp-playlist li:last-child {
+    border-bottom: none;
+    padding-bottom: 3px;
+}
+div.jp-type-playlist div.jp-playlist a {
+    color: #fff;
+    text-decoration: none;
+}
+div.jp-type-playlist div.jp-playlist a:hover {
+    color: #e892e9;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+    background-color: #26102e;
+    margin: 0 -20px;
+    padding: 2px 20px;
+    border-top: 1px solid #26102e;
+    border-bottom: 1px solid #26102e;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current a {
+    color: #e892e9;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
+    float: right;
+    display: inline;
+    text-align: right;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #8C7A99;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove:hover {
+    color: #E892E9;
+}
+div.jp-type-playlist div.jp-playlist span.jp-free-media {
+    float: right;
+    display: inline;
+    text-align: right;
+    color: #8C7A99;
+}
+div.jp-type-playlist div.jp-playlist span.jp-free-media a {
+    color: #8C7A99;
+}
+div.jp-type-playlist div.jp-playlist span.jp-free-media a:hover {
+    color: #E892E9;
+}
+span.jp-artist {
+    font-size: .8em;
+    color: #8C7A99;
+}
+div.jp-jplayer audio, div.jp-jplayer {
+    width: 0px;
+    height: 0px;
+}
+div.jp-jplayer {
+    background-color: #000000;
+}
+.jp-no-solution {
+    padding: 5px;
+    font-size: .8em;
+    background-color: #3a2a45;
+    border-top: 2px solid #554461;
+    border-left: 2px solid #554461;
+    border-right: 2px solid #180a1f;
+    border-bottom: 2px solid #180a1f;
+    color: #FFF;
+    display: none;
+}
+.jp-no-solution a {
+    color: #FFF;
+}
+.jp-no-solution span {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*************************
+        slide
+*************************/
+.css-slideshow{
+    position: relative;
+    padding-bottom: 53.33%;
+}
+.css-slideshow figure{
+    margin: 0;
+    width: 100%;
+    background: #000;
+    position: absolute;
+}
+.css-slideshow figure{
+    opacity:0;
+}
+figure:nth-child(1) {
+    animation: xfade 48s 42s infinite;
+    -webkit-animation: xfade 40s 35s infinite;
+}
+figure:nth-child(2) {
+    animation: xfade 48s 36s infinite;
+    -webkit-animation: xfade 40s 30s infinite;
+}
+figure:nth-child(3) {
+    animation: xfade 48s 30s infinite;
+    -webkit-animation: xfade 40s 25s infinite;
+}
+figure:nth-child(4) {
+    animation: xfade 48s 24s infinite;
+    -webkit-animation: xfade 40s 20s infinite;
+}
+figure:nth-child(5) {
+    animation: xfade 48s 18s infinite;
+    -webkit-animation: xfade 40s 15s infinite;
+}
+figure:nth-child(6) {
+    animation: xfade 48s 12s infinite;
+    -webkit-animation: xfade 40s 10s infinite;
+}
+figure:nth-child(7) {
+    animation: xfade 48s 6s infinite;
+    -webkit-animation: xfade 40s 5s infinite;
+}
+figure:nth-child(8) {
+    animation: xfade 48s 0s infinite;
+    -webkit-animation: xfade 40s 0s infinite;
+}
+
+@keyframes xfade{
+    0%{
+        opacity: 1;
+    }
+    14.67% {
+        opacity:1;
+    }
+    16.67%{
+        opacity: 0;
+    }
+    98% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-webkit-keyframes xfade{
+    0%{
+        opacity: 1;
+    }
+    14.67% {
+        opacity:1;
+    }
+    16.67%{
+        opacity: 0;
+    }
+    98% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/****************
+    about-page
+*****************/
+.about-page{
+    padding: 20px;
+}
+.btn, .form-control{
+    border-radius: 0;
+}
+.alert{
+    display: none;
+    text-align: center;
+}
